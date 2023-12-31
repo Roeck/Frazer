@@ -9,7 +9,7 @@ function Footer() {
         fontStyle: "italic",
       }}
     >
-      &copy; {new Date().getFullYear()} Made with 💙 by Rony Martins
+      &copy; {new Date().getFullYear()} Rony Martins
     </h1>
   );
 }
