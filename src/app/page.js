@@ -1,5 +1,12 @@
 import Image from "next/image";
+import UploadForm from "@/components/UploadForm";
 
 export default function Home() {
-  return <h1>Frazer</h1>;
+  return (
+    <>
+      <div className="text-center">
+        <UploadForm />
+      </div>
+    </>
+  );
 }
