@@ -1,6 +1,7 @@
 import Image from "next/image";
 import UploadForm from "@/components/UploadForm";
 import PageHeaders from "@/components/PageHeaders";
+import DemoSection from "@/components/DemoSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <div className="text-center">
         <UploadForm />
       </div>
+      <DemoSection />
     </>
   );
 }
