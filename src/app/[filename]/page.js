@@ -1,11 +1,17 @@
 "use client";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ResultVideo from "@/components/ResultVideo";
 
 export default function FilePage({ params }) {
   const filename = params.filename;
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [isFetchingInfo, setIsFetchingInfo] = useState(false);
+  const [awsTranscriptionItems, setAwsTranscriptionItems] = useState([]);
+
+  useEffect(() => {
+    getTranscription();
+  }, [filename]);
 
   function getTranscription() {
     setIsFetchingInfo(true);
@@ -18,6 +24,10 @@ export default function FilePage({ params }) {
         setTimeout(getTranscription, 3000);
       } else {
         setIsTranscribing(false);
+
+        setAwsTranscriptionItems(
+          clearTranscriptionItems(transcription.results.items)
+        );
       }
     });
   }
@@ -39,7 +49,10 @@ export default function FilePage({ params }) {
         </div>
         <div>
           <h2 className="text-2xl mb-4 text-white/60">Result</h2>
-          ResultVideo
+          <ResultVideo
+            filename={filename}
+            transcriptionItems={awsTranscriptionItems}
+          />
         </div>
       </div>
     </div>
