@@ -1,3 +1,5 @@
+import TranscriptionItem from "@/components/TranscriptionItem";
+
 export default function TranscriptionEditor({
   awsTranscriptionItems,
   setAwsTranscriptionItems,
@@ -20,7 +22,20 @@ export default function TranscriptionEditor({
       {awsTranscriptionItems.length > 0 && (
         <div className="h-48 sm:h-auto overflow-y-scroll sm:overflow-auto">
           {awsTranscriptionItems.map((item, key) => (
-            <div key={key}>TranscriptionItem</div>
+            <div key={key}>
+              <TranscriptionItem
+                handleStartTimeChange={(ev) =>
+                  updateTranscriptionItem(key, "start_time", ev)
+                }
+                handleEndTimeChange={(ev) =>
+                  updateTranscriptionItem(key, "end_time", ev)
+                }
+                handleContentChange={(ev) =>
+                  updateTranscriptionItem(key, "content", ev)
+                }
+                item={item}
+              />
+            </div>
           ))}
         </div>
       )}
