@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             <nav className="flex items-center gap-2 sm:gap-6 text-white/80 text-sm sm:text-bas">
               <Link href="/">Home</Link>
               <Link href="/pricing">Pricing</Link>
-              <a href="mailto:contact@epiccaptions.com">Contact</a>
+              <a href="mailto:rons9n@gmail.com">Contact</a>
             </nav>
           </header>
           {children}

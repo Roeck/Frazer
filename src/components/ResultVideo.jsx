@@ -86,7 +86,7 @@ export default function ResultVideo({ filename, transcriptionItems }) {
           className="bg-green-600 py-2 px-6 rounded-full inline-flex gap-2 border-2 border-purple-700/50 cursor-pointer"
         >
           <SparklesIcon />
-          <span>Apply captions</span>
+          <span>Apply Subtitles</span>
         </button>
       </div>
       <div>
