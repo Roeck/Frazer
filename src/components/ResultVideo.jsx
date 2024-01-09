@@ -1,4 +1,5 @@
 import SparklesIcon from "@/components/SparklesIcon";
+import { transcriptionItemsToSrt } from "@/libs/awsTranscriptionHelpers";
 import { FFmpeg } from "@ffmpeg/ffmpeg";
 import { toBlobURL, fetchFile } from "@ffmpeg/util";
 import { useEffect, useState, useRef } from "react";
@@ -41,8 +42,9 @@ export default function ResultVideo({ filename, transcriptionItems }) {
 
   const transcode = async () => {
     const ffmpeg = ffmpegRef.current;
-
+    const srt = transcriptionItemsToSrt(transcriptionItems);
     await ffmpeg.writeFile(filename, await fetchFile(videoUrl));
+    await ffmpeg.writeFile("subs.srt", srt);
     videoRef.current.src = videoUrl;
     await new Promise((resolve, reject) => {
       videoRef.current.onloadedmetadata = resolve;
@@ -58,7 +60,17 @@ export default function ResultVideo({ filename, transcriptionItems }) {
         setProgress(videoProgress);
       }
     });
-
+    await ffmpeg.exec([
+      "-i",
+      filename,
+      "-preset",
+      "ultrafast",
+      "-vf",
+      `subtitles=subs.srt:fontsdir=/tmp:force_style='Fontname=Roboto Bold,FontSize=30,MarginV=70,PrimaryColour=${toFFmpegColor(
+        primaryColor
+      )},OutlineColour=${toFFmpegColor(outlineColor)}'`,
+      "output.mp4",
+    ]);
     const data = await ffmpeg.readFile("output.mp4");
     videoRef.current.src = URL.createObjectURL(
       new Blob([data.buffer], { type: "video/mp4" })
@@ -78,14 +90,14 @@ export default function ResultVideo({ filename, transcriptionItems }) {
         </button>
       </div>
       <div>
-        Primary color:
+        primary color:
         <input
           type="color"
           value={primaryColor}
           onChange={(ev) => setPrimaryColor(ev.target.value)}
         />
         <br />
-        Outline color:
+        outline color:
         <input
           type="color"
           value={outlineColor}

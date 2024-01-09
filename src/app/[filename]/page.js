@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ResultVideo from "@/components/ResultVideo";
+import { clearTranscriptionItems } from "@/libs/awsTranscriptionHelpers";
 
 export default function FilePage({ params }) {
   const filename = params.filename;
