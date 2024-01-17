@@ -1,4 +1,3 @@
-import Image from "next/image";
 import UploadForm from "@/components/UploadForm";
 import PageHeaders from "@/components/PageHeaders";
 import DemoSection from "@/components/DemoSection";
@@ -7,8 +6,8 @@ export default function Home() {
   return (
     <>
       <PageHeaders
-        h1Text={"Add epic subtitles to your videos"}
-        h2Text={"Just upload your video and we will do the rest"}
+        h1Text={"ADD SUBTITLES TO YOUR VIDEOS FOR FREE!"}
+        h2Text={"Upload, edit and download your favorite result :)"}
       />
       <div className="text-center">
         <UploadForm />

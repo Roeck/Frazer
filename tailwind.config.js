@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         "bg-gradient-from": "rgb(17, 24, 39)",
-        "bg-gradient-to": "rgb(124, 58, 237)",
+        "bg-gradient-to": "rgb(64, 7, 222)",
       },
     },
   },
