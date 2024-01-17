@@ -13,6 +13,16 @@ export default function Home() {
         <UploadForm />
       </div>
       <DemoSection />
+      <h1
+        style={{
+          color: "white",
+          textAlign: "center",
+          marginTop: "17.6rem",
+          fontStyle: "italic",
+        }}
+      >
+        Made with 💙 by Rony Martins @ 2024
+      </h1>
     </>
   );
 }

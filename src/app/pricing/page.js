@@ -213,6 +213,17 @@ export default function PricingPage() {
             Choose plan
           </button>
         </div>
+        <h1
+          style={{
+            color: "white",
+            textAlign: "center",
+            marginTop: "4.9rem",
+            marginRight: "-18.1rem",
+            fontStyle: "italic",
+          }}
+        >
+          Made with 💙 by Rony Martins @ 2024
+        </h1>
       </div>
     </>
   );
