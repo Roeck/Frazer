@@ -1,6 +1,7 @@
 import UploadForm from "@/components/UploadForm";
 import PageHeaders from "@/components/PageHeaders";
 import DemoSection from "@/components/DemoSection";
+import { CrispProvider } from "@/components/Crisp-Provider";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <UploadForm />
       </div>
       <DemoSection />
+      <CrispProvider />
       <div style={{ paddingTop: "1.5rem" }}>
         <Footer />
       </div>
