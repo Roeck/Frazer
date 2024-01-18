@@ -1,6 +1,7 @@
 import UploadForm from "@/components/UploadForm";
 import PageHeaders from "@/components/PageHeaders";
 import DemoSection from "@/components/DemoSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,16 +14,9 @@ export default function Home() {
         <UploadForm />
       </div>
       <DemoSection />
-      <h1
-        style={{
-          color: "white",
-          textAlign: "center",
-          marginTop: "17.6rem",
-          fontStyle: "italic",
-        }}
-      >
-        Made with 💙 by Rony Martins @ 2024
-      </h1>
+      <div style={{ paddingTop: "1.5rem" }}>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -1,11 +1,12 @@
 import PageHeaders from "@/components/PageHeaders";
+import Footer from "@/components/Footer";
 
 export default function PricingPage() {
   return (
     <>
       <PageHeaders h1Text={"PRICING"} h2Text={"(feature on progress!)"} />
       <div class="p-10 grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-indigo-900 dark:border-gray-700">
+        <div class="w-full max-w-sm p-4 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-indigo-900 dark:border-gray-700">
           <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
             Standard plan
           </h5>
@@ -109,7 +110,7 @@ export default function PricingPage() {
             Choose plan
           </button>
         </div>
-        <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-indigo-800 dark:border-gray-700">
+        <div class="w-full max-w-sm p-4 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-indigo-800 dark:border-gray-700">
           <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
             Extra plan
           </h5>
@@ -213,17 +214,9 @@ export default function PricingPage() {
             Choose plan
           </button>
         </div>
-        <h1
-          style={{
-            color: "white",
-            textAlign: "center",
-            marginTop: "4.9rem",
-            marginRight: "-18.1rem",
-            fontStyle: "italic",
-          }}
-        >
-          Made with 💙 by Rony Martins @ 2024
-        </h1>
+      </div>
+      <div style={{ paddingTop: "7.5rem" }}>
+        <Footer />
       </div>
     </>
   );
