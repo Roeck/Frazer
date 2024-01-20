@@ -215,7 +215,7 @@ export default function PricingPage() {
           </button>
         </div>
       </div>
-      <div style={{ paddingTop: "7.5rem" }}>
+      <div className="sm:mt-40">
         <Footer />
       </div>
     </>

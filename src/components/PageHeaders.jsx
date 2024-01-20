@@ -3,9 +3,9 @@ export default function PageHeaders({
   h2Text = "Subheader",
 }) {
   return (
-    <section className="text-center mt-2 italic">
+    <section className="text-center italic">
       <h1
-        className="text-xl sm:text-6xl sm:mt-20 mt-3"
+        className="text-xl sm:text-6xl sm:mt-2 mt-3"
         style={{ textShadow: "1px 1px 0 rgba(0,0,0,.2)" }}
       >
         {h1Text}

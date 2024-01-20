@@ -80,30 +80,40 @@ export default function ResultVideo({ filename, transcriptionItems }) {
 
   return (
     <>
-      <div className="mb-4">
-        <button
-          onClick={transcode}
-          className="bg-green-600 py-2 px-6 rounded-full inline-flex gap-2 border-2 border-purple-700/50 cursor-pointer"
-        >
-          <SparklesIcon />
-          <span>Apply Subtitles</span>
-        </button>
-      </div>
-      <div>
-        primary color:
+      <div className="bg-indigo-800 p-2 rounded-md border-2 border-indigo-500">
+        <span div className="text-2xl text-white">
+          Text Color:
+        </span>
+        <br />
         <input
           type="color"
           value={primaryColor}
           onChange={(ev) => setPrimaryColor(ev.target.value)}
         />
         <br />
-        outline color:
+        <span div className="text-2xl text-white">
+          Outline Color:
+        </span>
+        <br />
         <input
           type="color"
           value={outlineColor}
           onChange={(ev) => setOutlineColor(ev.target.value)}
         />
       </div>
+      <br></br>
+      <div className="mb-4">
+        <button
+          onClick={transcode}
+          className="bg-indigo-800 hover:bg-indigo-700 py-2 px-6 rounded-full inline-flex gap-2 border-2 border-indigo-400 cursor-pointer"
+        >
+          <SparklesIcon />
+          <span>Apply Subtitles</span>
+          <SparklesIcon />
+        </button>
+      </div>
+      <br></br>
+      <h2 className="text-2xl mb-4 text-white">Result:</h2>
       <div className="rounded-xl overflow-hidden relative">
         {progress && progress < 1 && (
           <div className="absolute inset-0 bg-black/80 flex items-center">
@@ -121,7 +131,12 @@ export default function ResultVideo({ filename, transcriptionItems }) {
             </div>
           </div>
         )}
-        <video data-video={0} ref={videoRef} controls></video>
+        <video
+          className="sm:p-3"
+          data-video={0}
+          ref={videoRef}
+          controls
+        ></video>
       </div>
     </>
   );

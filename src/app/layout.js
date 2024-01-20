@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Frazer",
-  description: "Subtitle your videos online for free!",
+  description: "Subtitle your videos easily!",
 };
 
 export default function RootLayout({ children }) {

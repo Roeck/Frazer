@@ -33,7 +33,7 @@ export default function UploadForm() {
           </div>
         </div>
       )}
-      <label className="bg-indigo-800 hover:bg-indigo-700 py-2 px-6 rounded-full inline-flex gap-2 border-2 border-purple-700/50 cursor-pointer mt-3">
+      <label className="bg-indigo-800 hover:bg-indigo-700 py-2 px-6 rounded-full inline-flex gap-2 border-2 border-indigo-400 cursor-pointer mt-3">
         <UploadIcon />
         <span>Choose file</span>
         <input onChange={upload} type="file" className="hidden" />
