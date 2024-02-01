@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align='center'>
 
-## Getting Started
+<h1>Frazer</h1>
+<p>Subtitle generator that takes a video, transcribes it detecting voices and then applies customizable subtitles to them through an editor (timestamps, text and outline colors), allowing users to download the final desired result. For storage, I use an AWS S3 bucket and AWS Transcribe Service for the transcriptions.</p>
 
-First, run the development server:
+![Screenshot (294)](https://github.com/Roeck/Frazer/assets/28878478/452f563d-7bbd-4819-bb8b-cc5851d85730)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Screenshot (295)](https://github.com/Roeck/Frazer/assets/28878478/99a7f940-a8bb-487f-be2c-a24dcc340a21)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<h4> <span> · </span> <a href="https://github.com/Roeck/Frazer/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/Roeck/Frazer/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/Roeck/Frazer/issues"> Request Feature </a> </h4>
 
-## Learn More
+##
 
-To learn more about Next.js, take a look at the following resources:
+</div>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div align='center'>
+  
+### :space_invader: Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+:zap: JavaScript
+:zap: React
+:zap: Tailwind CSS
+:zap: AWS
 
-## Deploy on Vercel
+</div>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+##
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### :dart: Features
+- - Video uploads (currently support only for small sized videos)
+- - Subtitles insertion through AWS transcriptions
+- - Subtitles editor, providing timestamps for text, text colors and text outline colors
+- - Downloable video result
+- - Responsive design using Tailwind CSS
+- - AWS S3 buckets for video storage
+- - Real time chat feature for help support
+
+ 
+<br />
+
+  
+### :art: Color Reference
+| Color | Hex |
+| --------------- | ---------------------------------------------------------------- |
+| Primary Color | ![#1d3f9d](https://via.placeholder.com/10/1d3f9d?text=+) #1d3f9d |
+| Secondary Color | ![#393E46](https://via.placeholder.com/10/393E46?text=+) #393E46 |
+| Accent Color | ![#005eb5](https://via.placeholder.com/10/005eb5?text=+) #005eb5 |
+| Text Color | ![#0f1562](https://via.placeholder.com/10/0f1562?text=+) #0f1562 |
+
+<br />
+
+## :compass: Roadmap
+
+* [ ] Add extra video editing features
+* [ ] Add SaaS plans
+
+<br />
+
+
+## :wave: Contributing
+
+<a href="https://github.com/Roeck/Frazer/graphs/contributors"> <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" /> </a>
+
+Contributions are always welcome!
+
+
+## :handshake: Contact
+
+Rony Martins - - rons9n@gmail.com
+
+
+
+
