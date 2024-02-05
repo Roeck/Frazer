@@ -24,7 +24,7 @@
 :zap: Next.js
 :zap: Tailwind CSS
 :zap: Node.js
-:zap: AWS
+:zap: AWS :zap:
 
 </div>
 
