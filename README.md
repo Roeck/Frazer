@@ -20,8 +20,10 @@
 ### :space_invader: Tech Stack
 
 :zap: JavaScript
-:zap: React
+:zap: React.js
+:zap: Next.js
 :zap: Tailwind CSS
+:zap: Node.js
 :zap: AWS
 
 </div>
