@@ -1,4 +1,5 @@
 import "./globals.css";
+import SparklesIcon from "@/components/SparklesIcon";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
@@ -21,13 +22,13 @@ export default function RootLayout({ children }) {
         <main className="p-4 max-w-2xl mx-auto">
           <header className="flex justify-between my-2 sm:my-8">
             <Link href="/" className="flex gap-1">
-              Icon
+              <SparklesIcon />
               <span>Frazer</span>
             </Link>
             <nav className="flex items-center gap-2 sm:gap-6 text-white/80 text-sm sm:text-bas">
               <Link href="/">Home</Link>
               <Link href="/pricing">Pricing</Link>
-              <a href="mailto:rons9n@gmail.com">Contact</a>
+              <a href="mailto:contact@epiccaptions.com">Contact</a>
             </nav>
           </header>
           {children}
